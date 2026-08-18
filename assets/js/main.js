@@ -19,7 +19,24 @@ document.addEventListener("DOMContentLoaded", function () {
   initCompareTableFilter();
   initFormStub("contact-form", "contact-status", "Danke für deine Nachricht! Wir melden uns in Kürze.");
   initFormStub("newsletter-form", "newsletter-status", "Danke! Bitte bestätige die Anmeldung über den Link in deiner E-Mail.");
+  markAffiliateElements();
 });
+
+/**
+ * Ergänzt bei allen Affiliate-Elementen (Attribut data-affiliate) einen
+ * für Screenreader hörbaren Hinweis. Das sichtbare Sternchen selbst wird
+ * unabhängig von JavaScript per CSS (::after) dargestellt, damit die
+ * Kennzeichnung auch ohne aktiviertes JavaScript zuverlässig sichtbar ist.
+ */
+function markAffiliateElements() {
+  document.querySelectorAll("[data-affiliate]").forEach(function (el) {
+    if (el.querySelector(".affiliate-sr-label")) return;
+    var srLabel = document.createElement("span");
+    srLabel.className = "affiliate-sr-label visually-hidden";
+    srLabel.textContent = " (Affiliate-Link/Werbung)";
+    el.appendChild(srLabel);
+  });
+}
 
 function initCompareTableFilter() {
   var buttons = document.querySelectorAll(".filter-btn");
