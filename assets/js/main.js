@@ -17,8 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   initCompareTableFilter();
-  initFormStub("contact-form", "contact-status", "Danke für deine Nachricht! Wir melden uns in Kürze.");
-  initFormStub("newsletter-form", "newsletter-status", "Danke! Bitte bestätige die Anmeldung über den Link in deiner E-Mail.");
   markAffiliateElements();
 });
 
@@ -55,30 +53,5 @@ function initCompareTableFilter() {
         row.classList.toggle("is-hidden", !show);
       });
     });
-  });
-}
-
-/**
- * Kein Backend angebunden: validiert client-seitig und zeigt eine
- * Bestätigung an. Bei echter Anbindung hier den fetch()-Aufruf ergänzen.
- */
-function initFormStub(formId, statusId, successMessage) {
-  var form = document.getElementById(formId);
-  var status = document.getElementById(statusId);
-  if (!form || !status) return;
-
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      status.textContent = "Bitte fülle alle Pflichtfelder korrekt aus.";
-      status.className = "form-status error";
-      return;
-    }
-
-    status.textContent = successMessage;
-    status.className = "form-status success";
-    form.reset();
   });
 }
