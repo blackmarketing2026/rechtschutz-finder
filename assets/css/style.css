@@ -1070,6 +1070,12 @@ section {
   color: var(--color-text-muted);
 }
 
+.compare-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-3);
+}
+
 /* -------------------- Affiliate note -------------------- */
 .affiliate-note {
   max-width: 62ch;
