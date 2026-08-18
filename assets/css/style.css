@@ -716,6 +716,213 @@ section {
   color: var(--color-primary);
 }
 
+/* -------------------- Hero steps -------------------- */
+.hero-steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.hero-steps li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.92rem;
+  color: var(--color-text);
+}
+
+.hero-steps li span {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -------------------- Rechner / Calculator -------------------- */
+.calculator-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-3);
+}
+
+/* -------------------- Comparison table -------------------- */
+.table-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: var(--space-3);
+}
+
+.filter-btn {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--color-primary);
+}
+
+.filter-btn.is-active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 0.9rem 1.1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.92rem;
+}
+
+.compare-table th {
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-weight: 700;
+}
+
+.compare-table td:first-child,
+.compare-table th:first-child {
+  text-align: left;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.compare-table tr:last-child td {
+  border-bottom: none;
+}
+
+.compare-table tr.is-hidden {
+  display: none;
+}
+
+.compare-table .yes {
+  color: var(--color-accent-dark);
+  font-weight: 700;
+}
+
+.compare-table .no {
+  color: var(--color-text-muted);
+}
+
+/* -------------------- Affiliate note -------------------- */
+.affiliate-note {
+  max-width: 62ch;
+  margin: var(--space-4) auto 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* -------------------- Kontakt -------------------- */
+.contact-grid {
+  display: grid;
+  gap: var(--space-3);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 720px) {
+  .contact-grid {
+    grid-template-columns: 1.4fr 1fr;
+    align-items: start;
+  }
+}
+
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: vertical;
+}
+
+.newsletter-card h3 {
+  margin-bottom: 0.4rem;
+}
+
+.newsletter-card p {
+  font-size: 0.9rem;
+}
+
+.form-status {
+  font-size: 0.85rem;
+  margin: var(--space-1) 0 0;
+  min-height: 1.1em;
+}
+
+.form-status.success {
+  color: var(--color-success);
+}
+
+.form-status.error {
+  color: var(--color-error);
+}
+
+/* -------------------- Footer social -------------------- */
+.footer__social {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: var(--space-2);
+}
+
+.footer__social a {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s ease;
+}
+
+.footer__social a:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.footer__social svg {
+  width: 18px;
+  height: 18px;
+  stroke: #fff;
+}
+
 /* -------------------- Utilities -------------------- */
 .text-center { text-align: center; }
 .mt-0 { margin-top: 0; }
