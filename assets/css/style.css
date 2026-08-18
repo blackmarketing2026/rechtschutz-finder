@@ -1,18 +1,18 @@
 /* =========================================================
-   rechtschutz-finder.de — Design-Tokens & Basisstile
-   Farbrichtung: vertrauenswürdig & modern (Dunkelblau + Grün)
+   rechtschutzfinder.de — Design-Tokens & Basisstile
+   Farbrichtung: Dunkelblau + Hellblau, abgeleitet aus dem Logo
    ========================================================= */
 
 :root {
-  /* Primärfarbe — Vertrauen, Seriosität, Finanzen */
-  --color-primary: #163a5f;
-  --color-primary-dark: #0d263f;
-  --color-primary-light: #e8eff6;
+  /* Primärfarbe — Dunkelblau aus dem Logo (Schild): Vertrauen, Seriosität */
+  --color-primary: #0b2a53;
+  --color-primary-dark: #071c39;
+  --color-primary-light: #e7f1f8;
 
-  /* Akzentfarbe — Erfolg, Ersparnis, Handlung */
-  --color-accent: #1f9d55;
-  --color-accent-dark: #167a41;
-  --color-accent-light: #e6f6ec;
+  /* Akzentfarbe — Hellblau/Cyan aus dem Logo (Lupe): Handlung, Frische */
+  --color-accent: #0095bb;
+  --color-accent-dark: #007494;
+  --color-accent-light: #e3f6fb;
 
   /* Neutrale Basis */
   --color-background: #f7f9fb;
@@ -26,7 +26,7 @@
 
   /* Rand & Zustände */
   --color-border: #d8e0e7;
-  --color-focus: #1f9d55;
+  --color-focus: #007494;
 
   --color-success: #18794e;
   --color-warning: #a15c00;
@@ -247,13 +247,13 @@ section {
 }
 
 .btn-primary {
-  background: var(--color-accent);
+  background: var(--color-accent-dark);
   color: var(--color-text-inverse);
   box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
-  background: var(--color-accent-dark);
+  background: #005c76;
   box-shadow: var(--shadow-md);
 }
 
@@ -581,7 +581,7 @@ section {
 
 /* -------------------- CTA band -------------------- */
 .cta-band {
-  background: var(--color-accent);
+  background: var(--color-accent-dark);
   border-radius: var(--radius-lg);
   padding: var(--space-5);
   text-align: center;
