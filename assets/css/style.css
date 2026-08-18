@@ -364,6 +364,12 @@ section {
   text-align: center;
 }
 
+.section-head__logo {
+  height: 40px;
+  width: auto;
+  margin: 0 auto var(--space-2);
+}
+
 .section-head .eyebrow {
   display: inline-block;
   color: var(--color-accent-dark);
