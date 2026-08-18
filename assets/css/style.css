@@ -602,8 +602,23 @@ section {
 
 .step {
   position: relative;
-  padding: var(--space-4) var(--space-2) 0;
-  border-top: 1px solid rgba(216, 224, 231, 0.72);
+  min-height: 100%;
+  padding: 4.9rem var(--space-3) var(--space-3);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
+  border: 1px solid rgba(216, 224, 231, 0.82);
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(7, 28, 57, 0.05);
+  text-align: center;
+}
+
+.step::after {
+  content: "";
+  position: absolute;
+  top: 3.1rem;
+  left: var(--space-3);
+  right: var(--space-3);
+  height: 1px;
+  background: rgba(216, 224, 231, 0.72);
 }
 
 .step::before {
@@ -619,13 +634,20 @@ section {
   color: var(--color-text-inverse);
   font-weight: 700;
   position: absolute;
-  top: 0;
-  left: var(--space-2);
+  top: 1.15rem;
+  left: 50%;
+  transform: translateX(-50%);
   box-shadow: 0 10px 20px rgba(0, 116, 148, 0.18);
+  z-index: 1;
 }
 
 .step h3 {
   font-size: 1.05rem;
+  margin-bottom: 0.65rem;
+}
+
+.step p {
+  margin-bottom: 0;
 }
 
 /* -------------------- Alt section -------------------- */
