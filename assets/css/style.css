@@ -69,8 +69,13 @@ html {
   scroll-behavior: smooth;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
+  overflow-x: hidden;
   font-family: var(--font-base);
   color: var(--color-text);
   background:
@@ -78,6 +83,7 @@ body {
     linear-gradient(180deg, #fbfdff 0%, var(--color-background) 24rem);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
 }
 
 img {
@@ -144,7 +150,9 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-2) 0;
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+  gap: var(--space-2);
 }
 
 .nav__brand {
@@ -316,6 +324,10 @@ section {
   z-index: 1;
 }
 
+.hero__grid > * {
+  min-width: 0;
+}
+
 @media (min-width: 900px) {
   .hero__grid {
     grid-template-columns: 1.1fr 0.9fr;
@@ -451,7 +463,12 @@ section {
 
 @media (max-width: 520px) {
   .nav__logo {
-    height: 38px;
+    height: 42px;
+  }
+
+  .nav__toggle {
+    padding: 0.55rem;
+    margin-right: -0.55rem;
   }
 
   .hero {
@@ -498,6 +515,10 @@ section {
 .grid {
   display: grid;
   gap: var(--space-3);
+}
+
+.grid > * {
+  min-width: 0;
 }
 
 .grid-3 {
@@ -788,6 +809,10 @@ section {
   gap: var(--space-4);
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   margin-bottom: var(--space-5);
+}
+
+.footer__grid > * {
+  min-width: 0;
 }
 
 .footer__brand {
